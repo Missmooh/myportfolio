@@ -8,18 +8,19 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation Styling */
+/* Navigation Bar Styling */
 header {
-    background-color: hwb(71 1% 83% / 0);
+    background-color: #333; /* Same as the footer color */
+    color: white;  /* Set text color to white for contrast */
 }
 
-nav ul {
+header nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #02000500;
+    background-color: #333; /* Same background color as header */
 }
 
 nav ul li {
@@ -28,7 +29,7 @@ nav ul li {
 
 nav ul li a {
     font-family: 'Poppins', Arial, sans-serif;
-    color: #283d5c;
+    color: white; /* White text for the links */
     text-decoration: none;
     font-weight: 600;
     padding: 15px 20px;
@@ -37,13 +38,12 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-    color: #000000;
+    color: #ffffff; /* Keep visited links white */
 }
 
 nav ul li a:hover {
-    background-color: rgb(3, 87, 35);
+    background-color: rgb(3, 87, 35); /* Highlight link on hover */
     color: white;
-    
 }
 
 /* Section Styling */
@@ -78,15 +78,129 @@ ul {
     font-family: 'Roboto', Arial, sans-serif;
 }
 
-.project {
+/* Footer Styling */
+footer {
+    text-align: center;
     padding: 20px;
-    margin: 20px auto;
+    background-color: #333; /* Same as the navigation bar */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+footer a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #81c784;
+}
+
+/* General Reset */
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333; /* Same as the nav bar */
+    color: white;  /* Set text color to white for contrast */
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%; /* Ensure the footer spans the entire width */
+    font-size: 14px;
+}
+/* General Styling */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #95af4b;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+#contact {
+    padding: 20px;
     max-width: 900px;
-    background-color: rgb(41, 156, 26);
+    margin: 20px auto;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contact Title */
+#contact h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+    max-width: 600px;  /* Limit the form width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Align labels and inputs to the left */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;  /* Full width for input and textarea */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;  /* Include padding in the width calculation */
+}
+
+input[type="text"], input[type="email"] {
+    height: 40px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Submit Button Styling */
+button {
+    background-color: #4caf50;
     color: white;
-    font-family: 'Roboto', Arial, sans-serif;
+    padding: 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 /* Footer Styling */
@@ -110,23 +224,147 @@ footer a {
 footer a:hover {
     color: #81c784;
 }
-/* General Reset */
-html, body {
-    height: 100%; /* Ensure the body takes full height */
-    margin: 0;
+/* Projects Section */
+#projects {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#projects h2 {
+    text-align: center;
+    color: #333;
+}
+
+.project-list {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-/* Footer Styling */
-footer {
+.project-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-item a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-item a:hover {
+    text-decoration: underline;
+}
+#contact a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
+}
+
+#contact a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+#contact a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
+}
+
+#contact a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+#contact {
     text-align: center;
-    padding: 10px 0;
-    background-color: #333;
+    background-color: #333; /* Same as footer color */
     color: white;
-    margin-top: auto; /* Push footer to the bottom */
-    width: 100%; /* Ensure the footer spans the entire width */
-    font-size: 14px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#contact h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
 
+#contact p {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact li {
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #4caf50; /* Green link color for visibility */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #81c784; /* Light green on hover */
+    text-decoration: underline;
+}
+/* Navigation Bar Styling */
+header {
+    background-color: #333; /* Match footer color if needed */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center align the navigation links */
+    gap: 20px; /* Space between links */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #95af4b; /* Add hover effect */
+    color: white;
+    border-radius: 5px;
+}
+.certificate-image {
+    max-width: 100%; /* Adjust to fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Add spacing around images */
+    border: 2px solid #333; /* Optional border */
+    border-radius: 5px; /* Rounded edges */
+}
